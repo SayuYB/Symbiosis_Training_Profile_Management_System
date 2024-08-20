@@ -1,0 +1,21 @@
+﻿@model IEnumerable<PlacementDemo.Models.LinkedIn>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Full Name</th>
+            <th>Profile Picture</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var profile in Model)
+        {
+            <tr>
+                <td>@profile.FullName</td>
+                <td>
+                    <img src="@Url.Content("~/" + profile.ProfilePicturePath)" alt="Profile Picture" style="width: 100px; height: 100px;" />
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

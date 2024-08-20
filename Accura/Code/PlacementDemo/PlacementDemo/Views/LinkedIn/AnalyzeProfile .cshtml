@@ -1,0 +1,48 @@
+﻿@model PlacementDemo.Models.ViewModels.ProfileAnalysisViewModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Profile Analysis</title>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+    <body>
+        <h1>Profile Analysis Results</h1>
+        <div>
+            <h2>Profile Details</h2>
+            <p><strong>Full Name:</strong> @Model.Profile.FullName</p>
+            <p><strong>Email:</strong> @Model.Profile.Email</p>
+        </div>
+
+        <div>
+            <h2>Match Percentage</h2>
+            <p>Your profile matches @Model.AnalysisResult.MatchPercentage% of the required keywords.</p>
+        </div>
+
+        <div>
+            <h2>Keyword Matching</h2>
+            <canvas id="keywordChart"></canvas>
+            <script>
+                var ctx = document.getElementById('keywordChart').getContext('2d');
+                var chart = new Chart(ctx,
+                    {
+                        type: 'pie',
+                        data: {
+                            labels: ['Skills', 'Certifications', 'Projects'],
+                            datasets: [{
+                                data: [
+                                    @Model.AnalysisResult.MatchPercentage,
+                                    100 - @Model.AnalysisResult.MatchPercentage,
+                                    0
+                                ],
+                                backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56']
+                            }]
+                        }
+                    });
+            </script>
+        </div>
+    </body>
+</html>

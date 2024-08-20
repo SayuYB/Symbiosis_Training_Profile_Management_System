@@ -1,0 +1,667 @@
+/* General Body Styles */
+body {
+    background-color: black; /* Dark background for the whole page */
+    color: #E0E0E0; /* Light text color for readability */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar Styles */
+.nav-wrapper {
+    background-color: #1E1E1E; /* Darker background for the nav bar */
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.logo img {
+    height: 50px; /* Adjust logo height */
+}
+
+.navbar {
+    display: flex;
+    justify-content: RIGHT;
+    flex-grow: 1;height: 5PX;
+    align-items: RIGHT;
+}
+
+.navbar li {
+    margin-left: 20px;
+}
+
+.navbar li a {
+    color: #E0E0E0; /* Light text color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 1.3rem;
+    margin: 0 15px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.navbar li a:hover {
+    color: yellow; /* Highlight color on hover */
+}
+
+.navbar li a:active {
+    color: purple; /* Color on active click */
+}
+
+/* Main Content Styles */
+.main-content {
+    display: flex;
+    justify-content: space-between; /* Space between profile card and slideshow */
+    margin: 2rem 20px;
+    gap: 20px; /* Space between profile card and slideshow */
+}
+
+/* Profile Container Styles */
+.profile-container {
+    flex: 1; /* Make profile container take up space as needed */
+    max-width: 300px; /* Restrict the maximum width of the profile card */
+}
+
+/* Profile Card Styles */
+.profile-card {
+    background-color: #1E1E1E; /* Dark background for profile card */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+.card-title {
+    color: yellow; /* Highlight color for title */
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center; /* Center the text */
+}
+
+.profile-img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.card-content {
+    text-align: center; /* Center text within card content */
+}
+
+.card-action {
+    text-align: center; /* Center the action link */
+}
+
+.card-action a {
+    color: #FFFFFF; /* White color for the button */
+    font-size: 1rem;
+}
+
+/* Social Media Icons */
+.social-media-icons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between the icons */
+}
+
+.social-media-icons img {
+    width: 30px; /* Adjust icon size */
+    height: 30px; /* Adjust icon size */
+    transition: transform 0.3s ease;
+}
+
+.social-media-icons img:hover {
+    transform: scale(1.1); /* Slightly enlarge icon on hover */
+}
+
+/* Slideshow Styles */
+.slideshow-container {
+    flex: 3; /* Make slideshow container take more space */
+    position: relative;
+}
+
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    width: 1100px; 
+    height: 570px;
+    border-radius: 10px;
+}
+
+/* Fade animation for slideshow */
+@keyframes fade {
+    from { opacity: 0.4 } 
+    to { opacity: 1 }
+}
+
+.fade {
+    animation: fade 2s ease-in-out;
+}
+
+/* About Us section */
+.about-us {
+    text-align: center;
+    padding: 20px;
+}
+
+.about-us h2 {
+    color: yellow;
+    margin-bottom: 20px;
+}
+
+.about-us-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Adjust spacing between image and text */
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+}
+
+.image-container img {
+    width: 470px; 
+    height: 450px; 
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 100px;
+}
+
+.text-content {
+    flex: 2;
+    text-align: center;
+    font-size: 1.2rem; /* Adjust font size for better readability */
+    line-height: 2; /* Increase line height for readability */
+    color: #E0E0E0; /* Light text color */
+    margin: 0 auto; /* Center the text content */
+}
+
+.text-content p {
+    margin-bottom: 20px; /* Add space between paragraphs */
+}
+
+.category-button {
+    margin-top: 20px;
+}
+
+.category-link {
+    color: yellow;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.category-link:hover {
+    color: black;
+    background-color: #E0E000; /* Slightly darker shade of yellow for hover effect */
+}
+
+
+/* Walkthrough Section Styles */
+.walkthrough {
+    background-color: black; /* Dark background to match theme */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.walkthrough .header {
+    margin-bottom: 20px;
+}
+
+.walkthrough h2 {
+    color: yellow; /* Highlight color for header */
+    margin-bottom: 10px;
+}
+
+.walkthrough p {
+    color: #E0E0E0; /* Light text color for paragraph */
+    font-size: 1.1rem;
+}
+
+.step-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.step {
+    background-color: #2C2C2C; /* Slightly lighter dark background for steps */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(33% - 20px);
+    text-align: center;
+}
+
+.step-number {
+    background-color: #00ADB5; /* Step number background color */
+    color: #fff; /* Step number text color */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 15px;
+    font-size: 1.5rem;
+}
+
+.step img {
+    width: 120px; /* Adjust image size */
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+.step h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #E0E0E0; /* Light text color for step title */
+}
+
+.step p {
+    font-size: 1rem;
+    color: #B0B0B0; /* Slightly lighter text color for step description */
+}
+
+/*Introduction vedio walkthrough */
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+video {
+    width: 750px; /* Set the desired width */
+    height: 470px; /* Set the desired height */
+    max-width: 100%;
+    
+    border-radius: 10px; /* Match other elements' border-radius */
+}
+/* Contact Form Styles */
+
+.contact-form {
+    background-color: #1E1E1E;
+    color: #E0E0E0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    width: 50%;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.contact-form h2 {
+    color: yellow; /* Highlight color for title */
+    margin-bottom: 10px;
+}
+
+.contact-form p {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: #B0B0B0;
+}
+
+.contact-form label {
+    color: yellow; /* Highlight color for labels */
+    display: block;
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    background-color: #2C2C2C;
+    color: #E0E0E0;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: 2px solid yellow; /* Highlight border on focus */
+}
+
+.contact-form button {
+    background-color: yellow;
+    color: #121212;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.contact-form button:hover {
+    background-color: #E0E000; /* Slightly darker yellow on hover */
+}
+
+/* Contact Information Styles */
+.contact-container {
+    background-color: #1E1E1E;
+    color: #E0E0E0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    width: 50%;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.contact-header {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: #B0B0B0;
+}
+
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.contact-item {
+    background-color: #2C2C2C;
+    border-radius: 5px;
+    padding: 10px;
+    width: 45%;
+    margin-bottom: 10px;
+}
+
+.contact-item p {
+    color: #E0E0E0;
+    font-size: 1.1rem;
+}
+
+/* Footer*/
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-logo img {
+    max-width: 100px;
+    height: 50px;
+}
+
+.footer-social a {
+    margin: 0 10px;
+}
+
+.footer-social img {
+    width: 30px;
+    height: 30px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.footer-column {
+    margin: 20px;
+}
+
+.footer-column h3 {
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin: 5px 0;
+}
+
+.footer-column ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+}
+
+/* Category Page Styles */
+.category-page {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.category-page h1 {
+    margin-bottom: 40px;
+    color: yellow; /* Highlight color for title */
+}
+
+.category-cards {
+    display: flex;
+    justify-content: center;
+    gap: 90px;
+}
+
+.category-card, .placement-card {
+    background-color: #1E1E1E;
+    color: #E0E0E0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    width: 250px; /* Increased width for better visibility */
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card img, .placement-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: fit;
+    border-radius: 10px 10px 0 0; /* Rounded corners at the top */
+}
+
+.category-card h2, .placement-card h2 {
+    margin: 20px 0 0 0;
+    font-size: 1.5rem; /* Increased font size for better visibility */
+}
+
+.category-card:hover, .placement-card:hover {
+    background-color: #333;
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Form Container Styles */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+}
+
+.profile-creation {
+    background-color: #1E1E1E; /* Dark background for the form container */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    width: 80%;
+    max-width: 800px;
+}
+
+.profile-creation h1 {
+    color: yellow; /* Highlight color for the main heading */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* LinkedIn Form */
+
+.linkedin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.linkedin-form h2 {
+    border-bottom: 1px solid #E0E0E0;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+.linkedin-form label {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.linkedin-form input, 
+.linkedin-form textarea {
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #2C2C2C; /* Dark background for inputs */
+    color: #E0E0E0; /* Light text color for inputs */
+}
+
+.linkedin-form input::placeholder, 
+.linkedin-form textarea::placeholder {
+    color: #999; /* Lighter placeholder text */
+}
+
+    .linkedin-form button[type="submit"] {
+        background-color: yellow;
+        color: black;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        .linkedin-form button[type="submit"]:hover {
+            background-color: purple;
+            color: white;
+        }
+
+
+
+/*instagram profile*/
+
+/* General Body Styles */
+body {
+    background-color: black; /* Dark background for the whole page */
+    color: #E0E0E0; /* Light text color for readability */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Form Container Styles */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+}
+
+.profile-creation {
+    background-color: #1E1E1E; /* Dark background for the form container */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    width: 80%;
+    max-width: 800px;
+}
+
+.profile-creation h1 {
+    color: yellow; /* Highlight color for the main heading */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.instagram-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.instagram-form h2 {
+    color: yellow; /* Highlight color for section headings */
+    margin-bottom: 10px;
+}
+
+.instagram-form label {
+    font-size: 1.1em;
+    color: #E0E0E0;
+    margin-bottom: 5px;
+}
+
+.instagram-form input, 
+.instagram-form textarea, 
+.instagram-form select {
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #2C2C2C; /* Dark background for inputs */
+    color: #E0E0E0; /* Light text color for inputs */
+}
+
+.instagram-form textarea {
+    resize: vertical;
+}
+
+.instagram-form button {
+    padding: 10px;
+    background-color: yellow; /* Highlight color for the button */
+    color: #121212; /* Dark text color for the button */
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.instagram-form button:hover {
+    background-color: #FFD700; /* Slightly lighter yellow for hover effect */
+}
+
+input[type="file"] {
+    padding: 0;
+}

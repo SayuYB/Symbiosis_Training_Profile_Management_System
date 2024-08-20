@@ -1,0 +1,192 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model PlacementDemo.Models.ViewModels.LinkedInViewModel
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/css/style.css" type="text/css" />
+    <title>LinkedIn Profile</title>   
+</head>
+    <body>
+    <nav class="nav-wrapper">
+        <div class="container">
+            <a href="#!" class="logo"><img src="img/userlogo.jpeg" alt="logo"></a>
+            <ul class="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about-us">About</a></li>
+                <li><a href="#walkthrough">Walkthrough</a></li>
+                <li><a href="Category.html">Categories</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="Login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+    <h1>LinkedIn Profile</h1>
+    <div class="container">
+        <div class="profile-creation">
+            <h1>Create LinkedIn Profile</h1>
+            <form asp-action="ViewLinkedIn" method="post" enctype="multipart/form-data" class="linkedin-form">
+                <!-- Personal Information -->
+                <h2>Personal Information</h2>
+                <div>
+                    <label for="FullName">Full Name:</label>
+                    <input asp-for="FullName" id="FullName" placeholder="John Doe" required />
+                    <span asp-validation-for="FullName" class="text-danger"></span>
+                </div>
+
+                <div>
+                    <label for="ProfilePicturePath">Profile Picture:</label>
+                    <input asp-for="ProfilePicturePath" id="ProfilePicturePath" type="file" accept="image/*" />
+                    <span asp-validation-for="ProfilePicturePath" class="text-danger"></span>
+                </div>
+
+                <div>
+                    <label for="Email">Email:</label>
+                    <input asp-for="Email" id="Email" placeholder="john.doe@example.com" required />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+
+                <div>
+                    <label for="PhoneNumber">Phone Number:</label>
+                    <input asp-for="PhoneNumber" id="PhoneNumber" placeholder="1234567890" required />
+                    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                </div>
+
+                <!-- Professional Summary -->
+                <div>
+                    <h2>Professional Summary</h2>
+                    <label for="Headline">Headline:</label>
+                    <input asp-for="Headline" id="Headline" placeholder="Software Engineer at XYZ" required />
+                    <span asp-validation-for="Headline" class="text-danger"></span>
+                </div>
+
+                <div>
+                    <label for="Summary">Summary:</label>
+                    <textarea asp-for="Summary" id="Summary" placeholder="Experienced software engineer with a passion for developing scalable applications..." rows="4" required></textarea>
+                    <span asp-validation-for="Summary" class="text-danger"></span>
+                </div>
+
+                <!-- Experience -->
+                <div>
+                    <h2>Experience</h2>
+                    <label for="JobTitle">Job Title:</label>
+                    <input asp-for="JobTitle" id="JobTitle" placeholder="Senior Developer" required />
+                    <span asp-validation-for="JobTitle" class="text-danger"></span>
+                </div>
+
+                <div>
+                    <label for="CompanyName">Company Name:</label>
+                    <input asp-for="CompanyName" id="CompanyName" placeholder="XYZ Corp" required />
+                    <span asp-validation-for="CompanyName" class="text-danger"></span>
+                </div>
+
+                <div>
+                    <label for="EmploymentStartDate">Start Date:</label>
+                    <input asp-for="EmploymentStartDate" id="EmploymentStartDate" type="date" required />
+                    <span asp-validation-for="EmploymentStartDate" class="text-danger"></span>
+                </div>
+
+                <div>
+                    <label for="EmploymentEndDate">End Date:</label>
+                    <input asp-for="EmploymentEndDate" id="EmploymentEndDate" type="date" />
+                    <span asp-validation-for="EmploymentEndDate" class="text-danger"></span>
+                </div>
+
+                <div>
+                    <label for="JobResponsibilities">Job Responsibilities and Achievements:</label>
+                    <textarea asp-for="JobResponsibilities" id="JobResponsibilities" placeholder="Managed a team of developers..." rows="4" required></textarea>
+                    <span asp-validation-for="JobResponsibilities" class="text-danger"></span>
+                </div>
+
+                <!-- Education -->
+                <div>
+                    <h2>Education</h2>
+                    <label for="Degree">Degree:</label>
+                    <input asp-for="Degree" id="Degree" placeholder="B.Sc in Computer Science" required />
+                    <span asp-validation-for="Degree" class="text-danger"></span>
+                </div>
+
+                <div>
+                    <label for="InstitutionName">Institution Name:</label>
+                    <input asp-for="InstitutionName" id="InstitutionName" placeholder="University of XYZ" required />
+                    <span asp-validation-for="InstitutionName" class="text-danger"></span>
+                </div>
+
+                <div>
+                    <label for="GraduationDate">Graduation Date:</label>
+                    <input asp-for="GraduationDate" id="GraduationDate" type="date" required />
+                    <span asp-validation-for="GraduationDate" class="text-danger"></span>
+                </div>
+
+                <!-- Skills -->
+                <div>
+                    <h2>Skills</h2>
+                    <label for="Skills">Skills:</label>
+                    <input asp-for="Skills" id="Skills" placeholder="C#, ASP.NET, JavaScript" required />
+                    <span asp-validation-for="Skills" class="text-danger"></span>
+                </div>
+
+                <!-- Certifications -->
+                <div>
+                    <h2>Certifications</h2>
+                    <label for="Certifications">Certifications:</label>
+                    <input asp-for="Certifications" id="Certifications" placeholder="Microsoft Certified: Azure Developer" required />
+                    <span asp-validation-for="Certifications" class="text-danger"></span>
+                </div>
+
+                <!-- Projects -->
+                <div>
+                    <h2>Projects</h2>
+                    <label for="Projects">Projects:</label>
+                    <input asp-for="Projects" id="Projects" placeholder="Project Management System, E-commerce Site" required />
+                    <span asp-validation-for="Projects" class="text-danger"></span>
+                </div>
+
+                <!-- Languages -->
+                <div>
+                    <h2>Languages</h2>
+                    <label for="Languages">Languages:</label>
+                    <input asp-for="Languages" id="Languages" placeholder="English, Spanish" required />
+                    <span asp-validation-for="Languages" class="text-danger"></span>
+                </div>
+
+                <!-- Awards -->
+                <div>
+                    <h2>Awards</h2>
+                    <label for="Awards">Awards:</label>
+                    <input asp-for="Awards" id="Awards" placeholder="Best Developer Award 2023" required />
+                    <span asp-validation-for="Awards" class="text-danger"></span>
+                </div>
+
+                <!-- Volunteer Experience -->
+                <div>
+                    <h2>Volunteer Experience</h2>
+                    <label for="VolunteerExperience">Volunteer Experience:</label>
+                    <input asp-for="VolunteerExperience" id="VolunteerExperience" placeholder="Mentor at Code Club" required />
+                    <span asp-validation-for="VolunteerExperience" class="text-danger"></span>
+                </div>
+
+                <!-- Professional Affiliations -->
+                <div>
+                    <h2>Professional Affiliations</h2>
+                    <label for="ProfessionalAffiliations">Professional Affiliations:</label>
+                    <input asp-for="ProfessionalAffiliations" id="ProfessionalAffiliations" placeholder="Member of ACM" required />
+                    <span asp-validation-for="ProfessionalAffiliations" class="text-danger"></span>
+                </div>
+
+                <!-- Interests -->
+                <div>
+                    <h2>Interests</h2>
+                    <label for="Interests">Interests:</label>
+                    <input asp-for="Interests" id="Interests" placeholder="Coding, Reading" required />
+                    <span asp-validation-for="Interests" class="text-danger"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit and Analyze</button>
+            </form>
+        </div>
+    </div>
+    </body>
+</html>

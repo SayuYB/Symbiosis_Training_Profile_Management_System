@@ -1,0 +1,1 @@
+﻿DBCC CHECKIDENT ('LinkedIns', RESEED, 2)
